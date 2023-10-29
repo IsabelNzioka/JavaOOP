@@ -6,20 +6,19 @@ public class Plant extends PlantCommonOperations{
 
     // Encapsulation
     // Single Responsibility Principle - This class has a single responsibility of providing the common functionalities of all types of plants.
-    
-    
+      
     private String name;
     private int price;
     private String description;
-    private Category Category;
+
     
     public Plant() {
     }
-    public Plant(String name, int price, String description, com.systechafrica.encapsulation.Category category) {
+    public Plant(String name, int price, String description) {
         this.name = name;
         this.price = price;
         this.description = description;
-        Category = category;
+     
     }
 
     public String getName() {
@@ -40,12 +39,7 @@ public class Plant extends PlantCommonOperations{
     public void setDescription(String description) {
         this.description = description;
     }
-    public Category getCategory() {
-        return Category;
-    }
-    public void setCategory(Category category) {
-        Category = category;
-    }
+ 
     @Override
     public void getPlantInformation() {
         System.out.println("Plant Information: Name - " + getName() + ", Price - " + getPrice() + ", Description - " + getDescription());
